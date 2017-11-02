@@ -9,13 +9,13 @@ describe Raindrops do
     end
   end
 
-  context 'number has any factors' do
-    it 'returns corresponding sound' do
-      expect(Raindrops.new(28).speak).to eq('Plong')
-    end
+  tests = { 28 => 'Plong', 30 => 'PlingPlang' }
 
-    it 'returns corresponding sound' do
-      expect(Raindrops.new(30).speak).to eq('PlingPlang')
+  tests.each do |key, value|
+    context 'number has any factors' do
+      it 'returns corresponding sound' do
+        expect(Raindrops.new(key).speak).to eq(value)
+      end
     end
   end
 
