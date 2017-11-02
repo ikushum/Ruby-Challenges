@@ -10,7 +10,6 @@ describe Raindrops do
   end
 
   tests = { 28 => 'Plong', 30 => 'PlingPlang' }
-
   tests.each do |key, value|
     context 'number has any factors' do
       it 'returns corresponding sound' do
