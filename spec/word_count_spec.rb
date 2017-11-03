@@ -9,10 +9,11 @@ describe Words do
     end
   end
 
+  string = "olly olly in come free"
+  expected_hash = { 'olly' => 2, 'in' => 1, 'come' => 1, 'free' => 1  }  
+
   context 'when phrase is not empty' do
     it 'returns the count as hash ' do
-      string = "olly olly in come free"
-      expected_hash = { 'olly' => 2, 'in' => 1, 'come' => 1, 'free' => 1  }
       expect(Words.new(string).count).to eq(expected_hash)
     end
   end
