@@ -29,17 +29,9 @@ class Node
 		if data == @data
 			puts "#{data} is present"
 		elsif data < @data
-			if @left_child
-				@left_child.find(data)
-			else
-				puts "#{data} not found"
-			end
+			@left_child ? @left_child.find(data) : (puts "#{data} not found")
 		else data > @data 
-			if @right_child
-				@right_child.find(data)
-			else
-				puts "#{data} not found"
-			end
+			@right_child ? @right_child.find(data) : (puts "#{data} not found")
 		end
 	end
 end
@@ -60,13 +52,8 @@ class Tree
 	end
 
 	def find(data)
-		if @parent
-			@parent.find(data)
-		else
-			puts "#{data} not found"
-		end
+		@parent ? @parent.find(data) : (puts "#{data} not found") 
 	end
-
 end
 
 
